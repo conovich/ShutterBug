@@ -3,6 +3,8 @@ using System.Collections;
 
 public class TheState: MonoBehaviour {
 	
+	public static bool isPreviewing;
+	
 	public static TheState _MyState;
 	
 	private TheState() {}
@@ -17,7 +19,7 @@ public class TheState: MonoBehaviour {
 	}
 	
 	void Start () {
-	
+		isPreviewing = false;
 	}
 	
 	void Update () {

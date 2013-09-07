@@ -21,7 +21,6 @@ public class MainCamera : MonoBehaviour {
 					gameObject.transform.Rotate(0.0f, -9.0f, 0.0f);
 				}
 			}
-			
 		}
 	}
 }
