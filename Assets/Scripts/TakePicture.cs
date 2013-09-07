@@ -20,7 +20,7 @@ public class TakePicture : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		
+		gameObject.camera.cullingMask = ~(1 << 8);
 	}
 
     void OnPostRender() {
