@@ -23,8 +23,8 @@ public class TakePicture : MonoBehaviour {
 
     void OnPostRender() {
         if (CaptureButton._Capture) {
-            Texture2D tex = new Texture2D(600, 600, TextureFormat.ARGB32, false);
-            tex.ReadPixels(new Rect(0, 0, 600, 600), 0, 0);
+            Texture2D tex = new Texture2D(Screen.width, Screen.height, TextureFormat.ARGB32, false);
+            tex.ReadPixels(new Rect(0, 0, Screen.width, Screen.height), 0, 0);
             tex.Apply();
 			display.material.mainTexture = tex;
 			//ImagePlane.renderer.material = display.material;
