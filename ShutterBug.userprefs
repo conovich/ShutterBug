@@ -1,0 +1,14 @@
+﻿<Properties>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/ImagePlane.cs">
+    <Files>
+      <File FileName="Assets/Scripts/TheState.cs" Line="22" Column="2" />
+      <File FileName="Assets/Scripts/CaptureButton.cs" Line="7" Column="2" />
+      <File FileName="Assets/Scripts/ImagePlane.cs" Line="35" Column="46" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>
