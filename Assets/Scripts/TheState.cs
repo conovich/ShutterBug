@@ -23,6 +23,21 @@ public class TheState: MonoBehaviour {
 	}
 	
 	void Update () {
+		if (isPreviewing == true) GuiLightSwitchOn();
+		else GuiLightSwitchOff();
+	}
 	
+	void GuiLightSwitchOn () {
+		GameObject[] guiLights = GameObject.FindGameObjectsWithTag("guiLight");
+		for (int i = 0; i < guiLights.Length; i++) {
+			guiLights[i].light.intensity = 0.5f;
+		}
+	}
+		
+	void GuiLightSwitchOff () {
+		GameObject[] guiLights = GameObject.FindGameObjectsWithTag("guiLight");
+		for (int i = 0; i < guiLights.Length; i++) {
+			guiLights[i].light.intensity = 0.0f;
+		}
 	}
 }
