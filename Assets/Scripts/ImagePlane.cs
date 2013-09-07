@@ -2,8 +2,13 @@
 using System.Collections;
 
 public class ImagePlane : MonoBehaviour {
-
-	IEnumerator Start () {
+	
+	void Start(){
+		
+	}
+	
+	//LOADS A SAVED IMAGE ON START
+	/*IEnumerator Start () {
 			// Create a texture in DXT1 format
 		renderer.material.mainTexture = new Texture2D(4, 4, TextureFormat.DXT1, false);
 		
@@ -18,7 +23,7 @@ public class ImagePlane : MonoBehaviour {
 			Texture2D tex = (Texture2D)renderer.material.mainTexture;
 			www.LoadImageIntoTexture(tex);
 		}
-	}
+	}*/
 	
 	void Update () {
 		
