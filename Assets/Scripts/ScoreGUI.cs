@@ -52,6 +52,8 @@ public class ScoreGUI : MonoBehaviour {
 	
 	void ScoreRuleOfThirdsPicture(){
 		//come up with scoring system!
+		_myScore += 10;
 		gameObject.guiText.text = _myScore.ToString();
+		_captureButton._ScorePicture = false;
 	}
 }

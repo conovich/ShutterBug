@@ -35,6 +35,41 @@ public class GUIRadioButtons : MonoBehaviour {
 		if(GUI.Button(new Rect(20,70,80,20), "Rule of Thirds")) {
 			TheState._TheMode = TheState.GameMode.ruleOfThirds;
 		}
+		
+		
+		if(TheState._TheMode == TheState.GameMode.ruleOfThirds){
+		
+			float xCoord = 0.0f;
+			float yCoord = 0.0f;
+			float half = 0.5f;
+			float third = 1.0f/3.0f;
+			float twoThirds = 2.0f/3.0f;
+			for (int i = 0; i < 3; i++){
+				for (int j = 0; j < 3; j++){
+					if (i == 0){
+						xCoord = half*third*Screen.width;
+					}
+					else if (i == 1){
+						xCoord = half*third*Screen.width + third*Screen.width;
+					}
+					else if (i == 2){
+						xCoord = half*third*Screen.width + twoThirds*Screen.width;
+					}
+							
+					if (j == 0){
+						yCoord = half*third*Screen.height;		
+					}
+					else if (j == 1){
+						yCoord = half*third*Screen.height + third*Screen.height;
+					}
+					else if (j == 2){
+						yCoord = half*third*Screen.height + twoThirds*Screen.height;
+					}
+					GUI.Box(new Rect(xCoord, yCoord, 5, 5), i.ToString() + j.ToString());
+				}
+			}
+		}
+		
 	}
 	
 }

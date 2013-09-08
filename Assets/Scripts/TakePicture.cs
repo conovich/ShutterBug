@@ -10,7 +10,6 @@ public class TakePicture : MonoBehaviour {
     public Renderer[] _Display;
 	private int _numShots;
 	
-	// Use this for initialization
 	void Start () {
 		ImagePlaneObj = GameObject.FindGameObjectWithTag("imagePlane");
 		CaptureButtonObj = GameObject.FindGameObjectWithTag("captureButton");
@@ -18,11 +17,10 @@ public class TakePicture : MonoBehaviour {
 		_numShots = 0;
 	}
 	
-	// Update is called once per frame
 	void Update () {
 		gameObject.camera.cullingMask = ~(1 << 8);
-	}
-
+	}	
+	
     void OnPostRender() {
 		if(_numShots < _Display.Length){
 	        if (CaptureButton._Capture) {
