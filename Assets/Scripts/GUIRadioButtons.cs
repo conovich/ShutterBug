@@ -14,7 +14,7 @@ public class GUIRadioButtons : MonoBehaviour {
 	}
 	
 	void OnGUI () {
-		GUI.Box(new Rect(10,10,100,90), "Game Mode");
+		GUI.Box(new Rect(10,10,100,120), "Game Mode");
 
 		if(TheState._TheMode == TheState.GameMode.exposure){
 			GUI.color = Color.magenta;	
@@ -22,7 +22,7 @@ public class GUIRadioButtons : MonoBehaviour {
 		else if(TheState._TheMode == TheState.GameMode.ruleOfThirds){
 			GUI.color = Color.gray;
 		}
-		if(GUI.Button(new Rect(20,40,80,20), "Exposure")) {
+		if(GUI.Button(new Rect(15,40,90,20), "Exposure")) {
 			TheState._TheMode = TheState.GameMode.exposure;
 		}
 		
@@ -32,8 +32,12 @@ public class GUIRadioButtons : MonoBehaviour {
 		else if(TheState._TheMode == TheState.GameMode.ruleOfThirds){
 			GUI.color = Color.magenta;
 		}
-		if(GUI.Button(new Rect(20,70,80,20), "Rule of Thirds")) {
+		if(GUI.Button(new Rect(15,70,90,20), "Rule of Thirds")) {
 			TheState._TheMode = TheState.GameMode.ruleOfThirds;
+		}
+		
+		if(GUI.Button(new Rect(15,100,90,20), "Start Again!")) {
+			Application.LoadLevel(Application.loadedLevel);
 		}
 		
 		
