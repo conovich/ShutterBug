@@ -3,9 +3,11 @@ using System.Collections;
 
 public class CaptureButton : MonoBehaviour {
 	public bool _Capture;
+	public bool _ScorePicture;
 	
 	void Start () {
 		_Capture = false;
+		_ScorePicture = false;
 	}
 	
 	void Update () {
@@ -20,6 +22,7 @@ public class CaptureButton : MonoBehaviour {
 				if (rayCastData.collider.gameObject == gameObject) {
 					gameObject.renderer.material.color = Color.black;
 					_Capture = true;
+					_ScorePicture = true;
 				}
 			}
 		}	

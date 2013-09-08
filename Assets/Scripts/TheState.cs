@@ -5,21 +5,18 @@ public class TheState: MonoBehaviour {
 	
 	public static bool isPreviewing;
 	
-	public static TheState _MyState;
-	
-	private TheState() {}
-	
-	public static TheState Instance{
-		get{
-			if (_MyState == null){
-				_MyState = new TheState();	
-			}
-			return _MyState;
-		}
+	public enum GameMode{
+		start,
+		exposure,
+		ruleOfThirds
 	}
+	
+	public static GameMode _TheMode;
 	
 	void Start () {
 		isPreviewing = false;
+		_TheMode = GameMode.exposure;
+		
 	}
 	
 	void Update () {
