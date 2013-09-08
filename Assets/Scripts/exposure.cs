@@ -21,6 +21,7 @@ public class exposure : MonoBehaviour {
 						lights[i].light.intensity += (float) 0.1/lights.Length;
 					}
 					TheState.exposure++;
+					gameObject.audio.Play();
 				}
 				else if (button.tag == "bottomButton" && button == gameObject && TheState.exposure >= 0) {
 					GameObject[] lights = GameObject.FindGameObjectsWithTag("ambLight");
@@ -28,6 +29,7 @@ public class exposure : MonoBehaviour {
 						lights[i].light.intensity -= (float) 0.1/lights.Length;
 					}
 					TheState.exposure--;
+					gameObject.audio.Play();
 				}
 			}
 		}
