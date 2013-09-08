@@ -21,7 +21,7 @@ public class CaptureButton : MonoBehaviour {
 	}
 	
 	void CheckInput(){
-		if (Input.GetMouseButtonDown(0)) {
+		if (Input.GetMouseButtonDown(0) && TakePicture._numShots < 12) {
 			RaycastHit rayCastData = new RaycastHit();
 			Ray ray = Camera.main.ScreenPointToRay (Input.mousePosition);
 			if (Physics.Raycast (ray, out rayCastData, 100.0f)) {

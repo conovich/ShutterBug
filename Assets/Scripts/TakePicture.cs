@@ -8,7 +8,7 @@ public class TakePicture : MonoBehaviour {
 		
 	public bool grab = true;
     public Renderer[] _Display;
-	private int _numShots;
+	public static int _numShots;
 	
 	void Start () {
 		ImagePlaneObj = GameObject.FindGameObjectWithTag("imagePlane");
