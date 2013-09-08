@@ -29,6 +29,7 @@ public class CaptureButton : MonoBehaviour {
 					gameObject.renderer.material.color = Color.black;
 					_Capture = true;
 					_ScorePicture = true;
+					gameObject.audio.Play();
 				}
 			}
 		}	
