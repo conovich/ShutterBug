@@ -18,7 +18,7 @@ public class exposureUp : MonoBehaviour {
 					rayCastData.collider.gameObject.renderer.material.color = Color.blue;
 					GameObject[] lights = GameObject.FindGameObjectsWithTag("ambLight");
 					for (int i = 0; i < lights.Length; i++ ) {
-						lights[i].light.intensity -= (float) 0.5/lights.Length;
+						lights[i].light.intensity -= (float) 0.2/lights.Length;
 					}
 				}
 			}
