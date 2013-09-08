@@ -44,7 +44,8 @@ public class ScoreGUI : MonoBehaviour {
 	
 	void ScoreExposurePicture(){
 		//come up with scoring system!
-		_myScore +=2;
+		int points = 5 - Mathf.Abs(5 - TheState.exposure);
+		if (points >= 0)_myScore += points;
 		gameObject.guiText.text = _myScore.ToString();
 		_captureButton._ScorePicture = false;
 	}

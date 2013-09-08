@@ -4,6 +4,7 @@ using System.Collections;
 public class TheState: MonoBehaviour {
 	
 	public static bool isPreviewing;
+	public static int exposure;
 	
 	public enum GameMode{
 		start,
@@ -16,6 +17,7 @@ public class TheState: MonoBehaviour {
 	void Start () {
 		isPreviewing = false;
 		_TheMode = GameMode.exposure;
+		exposure = 5;
 		
 	}
 	
